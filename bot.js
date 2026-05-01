@@ -78,7 +78,7 @@ async function handleQuestions() {
   console.log("\n❓ Kiểm tra câu hỏi mới...");
   try {
     const res = await fetch(
-      `${WB_FEEDBACKS_BASE}/api/v1/questions?isAnswered=false&take=20&skip=0`,
+      `${WB_FEEDBACKS_BASE}/api/v1/questions?isAnswered=false&take=100&skip=0&order=dateDesc`,
       { headers }
     );
     const data = await res.json();
